@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="836.8,1751.2" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1122.4,1780" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="54">
       <x:String>System.Activities</x:String>
@@ -73,7 +73,7 @@
       <AssemblyReference>WindowsBase</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Create three value-key pairs where the key is used in datetime operations." DisplayName="Dictionary Demo" sap:VirtualizedContainerService.HintSize="641.6,1686.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Create three value-key pairs where the key is used in datetime operations." DisplayName="Dictionary Demo" sap:VirtualizedContainerService.HintSize="641.6,1715.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="scg:Dictionary(x:String, x:String)" Default="[new Dictionary(of String, String)]" Name="BirthDates" />
       <Variable x:TypeArguments="s:DateTime" Name="DateCurrentPerson" />
@@ -84,15 +84,15 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Assign DisplayName="Assign Jamie Hanks Birthday" sap:VirtualizedContainerService.HintSize="579.2,69.6" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <Assign DisplayName="Assign Jamie Hanks Birthday" sap:VirtualizedContainerService.HintSize="579.2,81.6" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
-        <OutArgument x:TypeArguments="x:String">[BirthDates("Jamie Hanks")]</OutArgument>
+        <OutArgument x:TypeArguments="x:String">[BirthDates("John Doe")]</OutArgument>
       </Assign.To>
       <Assign.Value>
         <InArgument x:TypeArguments="x:String">10/25/1989</InArgument>
       </Assign.Value>
     </Assign>
-    <Assign DisplayName="Assign Willie Garner Birthday" sap:VirtualizedContainerService.HintSize="579.2,69.6" sap2010:WorkflowViewState.IdRef="Assign_2">
+    <Assign DisplayName="Assign Willie Garner Birthday" sap:VirtualizedContainerService.HintSize="579.2,81.6" sap2010:WorkflowViewState.IdRef="Assign_2">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[BirthDates("Willie Garner")]</OutArgument>
       </Assign.To>
@@ -100,7 +100,7 @@
         <InArgument x:TypeArguments="x:String">01/08/1987</InArgument>
       </Assign.Value>
     </Assign>
-    <Assign DisplayName="Assign Patricia Shaw Birthday" sap:VirtualizedContainerService.HintSize="579.2,69.6" sap2010:WorkflowViewState.IdRef="Assign_3">
+    <Assign DisplayName="Assign Patricia Shaw Birthday" sap:VirtualizedContainerService.HintSize="579.2,81.6" sap2010:WorkflowViewState.IdRef="Assign_3">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[BirthDates("Patricia Shaw")]</OutArgument>
       </Assign.To>
@@ -108,13 +108,13 @@
         <InArgument x:TypeArguments="x:String">06/14/2005</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="579.2,1203.2" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[BirthDates.Keys]">
+    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="579.2,1207.2" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[BirthDates.Keys]">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="x:String">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:String" Name="currentItem" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Perform Date Time Operations On Key Values" sap:VirtualizedContainerService.HintSize="544,1068.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Perform Date Time Operations On Key Values" sap:VirtualizedContainerService.HintSize="544,1081.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="s:DateTime" Name="CurrentYearAnniversary" />
               <Variable x:TypeArguments="x:String" Name="WeekdayAnniversary" />
@@ -125,7 +125,7 @@
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Assign DisplayName="Convert Date" sap:VirtualizedContainerService.HintSize="481.6,69.6" sap2010:WorkflowViewState.IdRef="Assign_4">
+            <Assign DisplayName="Convert Date" sap:VirtualizedContainerService.HintSize="481.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_4">
               <Assign.To>
                 <OutArgument x:TypeArguments="s:DateTime">[DateCurrentPerson]</OutArgument>
               </Assign.To>
@@ -133,7 +133,7 @@
                 <InArgument x:TypeArguments="s:DateTime">[DateTime.Parse(BirthDates(currentItem))]</InArgument>
               </Assign.Value>
             </Assign>
-            <Assign DisplayName="Assign CurrentYearAnniversary" sap:VirtualizedContainerService.HintSize="481.6,69.6" sap2010:WorkflowViewState.IdRef="Assign_5">
+            <Assign DisplayName="Assign CurrentYearAnniversary" sap:VirtualizedContainerService.HintSize="481.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_5">
               <Assign.To>
                 <OutArgument x:TypeArguments="s:DateTime">[CurrentYearAnniversary]</OutArgument>
               </Assign.To>
